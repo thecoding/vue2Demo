@@ -1,6 +1,8 @@
 <template>
   <div>
+    <div class="title_name">控件列表</div>
      <group>
+       <cell title="component_head" ><router-link to="/page1">page1</router-link></cell>
         <cell title="router-link" value="value"><router-link to="/pages/list/linkPage">linkPage</router-link></cell>
         <cell title="v-on:click.native" v-on:click.native="titleClick">titleClick</cell>
         <cell title="v-if"  v-if="valueIf" v-on:click.native="nativeClick">{{valueIf}}</cell>
@@ -46,4 +48,12 @@ export default {
   },
 };
 </script>
+
+<style>
+.title_name{
+  margin-top: 20px;
+  text-align: center;
+  color: blue;
+}
+</style>
 

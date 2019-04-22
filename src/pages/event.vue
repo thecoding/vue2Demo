@@ -8,13 +8,13 @@
 <script>
 import Vue from "vue";
 
-window.onload = function() {
-  var example2 = new Vue({
-    el: "#example-2",
-    data: {
-      name: "Vue.js"
-    },
-    // 在 `methods` 对象中定义方法
+export default {
+  data(){
+    return {
+      name: "V"
+    }
+  },
+  // 在 `methods` 对象中定义方法
     methods: {
       greet: function(event) {
         // `this` 在方法里指向当前 Vue 实例
@@ -28,8 +28,7 @@ window.onload = function() {
         alert("ok");
       }
     }
-  });
-};
+}
 </script>
 
 

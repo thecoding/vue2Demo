@@ -8,12 +8,16 @@ var router = new VueRouter(
     routes: [{
       path: '/pages',
       component: resolve => require(['../pages/pageHome.vue'], resolve),
-      children: [
-        {
-          path: 'child',
-          component: resolve => require(['../pages/page1.vue'], resolve)
-        }
-      ]
+      // children: [
+      //   {
+      //     path: 'child',
+      //     component: resolve => require(['../pages/page1.vue'], resolve)
+      //   }
+      // ]
+    },
+    {
+      path: '/page1',
+      component: resolve => require(['../pages/page1.vue'], resolve)
     },
     {
       path: '/pages/list/linkPage',
@@ -37,7 +41,7 @@ var router = new VueRouter(
     },
     {
       path: '/',
-      component: resolve => require(['../components/HelloFromVux.vue'], resolve)
+      component: resolve => require(['../pages/pageHome.vue'], resolve)
     }]
   }
 )
