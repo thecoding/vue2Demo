@@ -1,8 +1,6 @@
 <template>
   <div>
-    <head-top parentShowRight="false">
-      <!-- <span slot="testslot">{{editText}}</span> -->
-    </head-top>
+    <head-top v-bind:propsvalue="false"></head-top>
       page content
   </div>
 </template>

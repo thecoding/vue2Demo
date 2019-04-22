@@ -5,9 +5,8 @@
       <slot name="testslot"></slot>
     </div>
     <div class="right">
-      <span v-if="parentShowRight">{{parentShowRight}}></span>
-      <span v-else>{{222}}></span>
-      </div>
+      <span v-if="propsvalue">{{propsvalue}}></span>
+    </div>
   </div>
 </template>
 
@@ -24,10 +23,11 @@ export default {
       this.$router.go(-1);
     }
   },
-  props: ['parentShowRight'],
+  props: ['propsvalue'],
   created: function(){
-    console.info("create page1");
-    console.info("parentShowRight--->"+this.parentShowRight);
+    console.info("propsvalue type is "+typeof(this.propsvalue));
+    console.info("propsvalue--->"+this.propsvalue);
+    
   }
 }
 </script>
